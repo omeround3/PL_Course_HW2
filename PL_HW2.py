@@ -134,20 +134,20 @@ def q8a(a, b):
 
 # q8a with user_choice
 def q8b(a, b):
-	while(True): 
-		for i in (range(min(a, b), max(a, b) + 1)):
-			print(i, end=', ')
-		print() # new line
-		# get value from send()
-		user_input = yield # doesn't work. this variable gets None for some reason
-		if user_input > 0:
-			yield from q8b(min(max(a, b), user_input), max(max(a, b), user_input))
-		else:
-			from_max = max(a, b) - 1
-			while from_max >= user_input:
-				yield from_max
-				from_max -= 1
-
+    index = a
+    u_choice = 1
+    while True:
+        user_choice = yield index
+        if user_choice :
+            yield index
+            u_choice = user_choice
+        if u_choice < 0:
+                if index is not a:
+                    index = index - 1
+        else:
+            if u_choice > 0:
+                if index is not b:
+                        index = index + 1
 
 # Remove the '#' to run the corresponding test
 # Don't forget to fill in the parameters.
@@ -204,22 +204,22 @@ if __name__ == "__main__":
 	# 	print(c, end= ', ')
 
 	# q8b #
-	# print('q8b:')
-	# generator = q8b(3, 11)
-	# counter = 0
+	print('q8b:')
+	generator = q8b(3, 11)
+	counter = 0
 
-	# for i in generator:
-	# 	if counter == 1:
-	# 		generator.send(32)
-	# 	if counter == 3:
-	# 		generator.send(-3)
-	# 	if counter == 6:
-	# 		generator.send(23)
-	# 	if counter == 8:
-	# 		generator.send(3)
-	# 	if counter == 10:
-	# 		generator.send(-13)
-	# 	if counter == 25:
-	# 		break
-	# 	print(i, end=', ')
-	# 	counter += 1
+	for i in generator:
+	 	if counter == 1:
+	 		generator.send(32)
+	 	if counter == 3:
+	 		generator.send(-3)
+	 	if counter == 6:
+	 		generator.send(23)
+	 	if counter == 8:
+	 		generator.send(3)
+	 	if counter == 10:
+	 		generator.send(-13)
+	 	if counter == 25:
+	 		break
+	 	print(i, end=', ')
+	 	counter += 1
