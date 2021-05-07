@@ -148,6 +148,7 @@ def q8b(a, b):
             if u_choice > 0:
                 if index is not b:
                         index = index + 1
+	
 
 # Remove the '#' to run the corresponding test
 # Don't forget to fill in the parameters.
@@ -204,22 +205,23 @@ if __name__ == "__main__":
 	# 	print(c, end= ', ')
 
 	# q8b #
-	print('q8b:')
-	generator = q8b(3, 11)
-	counter = 0
+	# print('q8b:')
+	# generator = q8b(3, 11)
+	# counter = 0
 
-	for i in generator:
-	 	if counter == 1:
-	 		generator.send(32)
-	 	if counter == 3:
-	 		generator.send(-3)
-	 	if counter == 6:
-	 		generator.send(23)
-	 	if counter == 8:
-	 		generator.send(3)
-	 	if counter == 10:
-	 		generator.send(-13)
-	 	if counter == 25:
-	 		break
-	 	print(i, end=', ')
-	 	counter += 1
+	# for i in generator:
+	#  	if counter == 1:
+	#  		generator.send(32)
+	#  	if counter == 3:
+	#  		generator.send(-3)
+	#  	if counter == 6:
+	#  		generator.send(23)
+	#  	if counter == 8:
+	#  		generator.send(3)
+	#  	if counter == 10:
+	#  		generator.send(-13)
+	#  	if counter == 25:
+	#  		break
+	#  	print(i, end=', ')
+	#  	counter += 1
+	# print()
